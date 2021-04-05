@@ -1,8 +1,10 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, globalShortcut } = require('electron')
 const isDev = require("electron-is-dev");
 
+let win;
+
 function createWindow () {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -21,6 +23,10 @@ function createWindow () {
 	}
 
   win.removeMenu();
+
+  globalShortcut.register('f5', function() {
+		win.reload()
+	})
 }
 
 app.whenReady().then(createWindow)

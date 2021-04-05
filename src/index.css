@@ -23,9 +23,44 @@ body {
 .cur-channel {
 	flex-grow: 2;
 	background-color: rgb(54, 57, 63);
+	flex-direction: column;
+	display: flex;
 }
 
 .member-list {
 	width: 240px;
 	background-color: rgb(47, 49, 54);
+}
+
+.server-list-icon img {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	margin: 12px;
+	transition: border-radius ease 0.2s;
+}
+
+.server-list-icon img:hover {
+	border-radius: 25%;
+	transition: border-radius ease 0.2s;
+}
+
+.msg-cont {
+
+}
+
+.new-msg {
+	margin: 1em;
+	padding: 0px;
+}
+
+.new-msg input {
+	width: calc(100% - 20px);
+	padding: 10px;
+	border-radius: 15px;
+	border: none;
+}
+
+input:focus {
+	outline: none;
 }
