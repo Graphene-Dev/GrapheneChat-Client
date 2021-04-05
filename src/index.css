@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+	color: white;
+}
+
+.app {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	min-height: 100vh;
+}
+
+.server-list {
+	width: 72px;
+	background-color: rgb(32, 34, 37);
+}
+
+.channel-list {
+	width: 240px;
+	background-color: rgb(47, 49, 54);
+}
+
+.cur-channel {
+	flex-grow: 2;
+	background-color: rgb(54, 57, 63);
+}
+
+.member-list {
+	width: 240px;
+	background-color: rgb(47, 49, 54);
+}

@@ -1,13 +1,19 @@
 import React from 'react'
 
-class App extends React.Component {
+import Channel from './Channel'
+import ChannelList from './ChannelList'
+import MemberList from './MemberList'
+import ServerList from './ServerList'
+
+export default class App extends React.Component {
 	render() {
 		return (
-			<div>
-				Hello World
+			<div className="app">
+				<ServerList />
+				<ChannelList />
+				<Channel />
+				<MemberList />
 			</div>
 		)
 	}
 }
-
-export default App;
