@@ -1,0 +1,44 @@
+{
+  "name": "graphenechat-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "BROWSER=none react-scripts start",
+    "dev": "electron .",
+    "build": "react-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graphene-Dev/GrapheneChat-Client.git"
+  },
+  "author": "codeflight <va7nfh@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Graphene-Dev/GrapheneChat-Client/issues"
+  },
+  "dependencies": {
+    "electron": "^12.0.2",
+    "electron-is-dev": "^2.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
