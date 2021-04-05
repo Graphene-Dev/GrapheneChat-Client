@@ -3,10 +3,11 @@ import ServerConnection from './ServerConnection'
 import testimg from './test.png'
 
 export default class Server {
-	constructor(name, ip, update) {
+	constructor(name, ip, update, id) {
 		this.name = name;
 		this.img = testimg;
 		this.update = update;
+		this.id = id
 		this.conn = new ServerConnection(ip, (msg) => this.onMessage(msg))
 		this.channels = [
 			{
@@ -23,15 +24,15 @@ export default class Server {
 	}
 
 	onMessage(msg) {
-		this.channels[0].messages.push({
-			id: 1,
-			msg: msg,
-			author: 2
-		})
+		this.channels[0].messages.push(JSON.parse(msg))
 		this.update()
 	}
 
 	send(msg) {
-		this.conn.send(msg)
+		this.conn.send(JSON.stringify({
+			id: 1,
+			msg: msg,
+			author: this.id
+		}))
 	}
 }

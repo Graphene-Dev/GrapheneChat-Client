@@ -16,7 +16,7 @@ export default class App extends React.Component {
 		}
 
 		this.servers = [
-			new Server("test", "localhost:8080", () => {this.setState({a: !this.state.a})})
+			new Server("test", "localhost:8080", () => {this.setState({a: !this.state.a})}, Math.round(Math.random()*100))
 		]
 	}
 

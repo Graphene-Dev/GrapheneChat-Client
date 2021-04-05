@@ -1,5 +1,6 @@
-const { app, BrowserWindow, globalShortcut } = require('electron')
+const { app, BrowserWindow } = require('electron')
 const isDev = require("electron-is-dev");
+const electronLocalshortcut = require('electron-localshortcut');
 
 let win;
 
@@ -24,7 +25,7 @@ function createWindow () {
 
   win.removeMenu();
 
-  globalShortcut.register('f5', function() {
+  electronLocalshortcut.register(win, 'F5', function() {
 		win.reload()
 	})
 }
