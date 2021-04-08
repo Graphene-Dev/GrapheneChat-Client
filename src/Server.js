@@ -21,18 +21,25 @@ export default class Server {
 				]
 			}
 		]
+		this.channelId = 0;
 	}
 
 	onMessage(msg) {
-		this.channels[0].messages.push(JSON.parse(msg))
+		msg = JSON.parse(msg)
+		if (msg.type === "NEW_MESSAGE")
+			this.channels[this.channelId].messages.push(msg.data);
 		this.update()
 	}
 
 	send(msg) {
 		this.conn.send(JSON.stringify({
-			id: 1,
-			msg: msg,
-			author: this.id
+			type: "NEW_MESSAGE",
+			data:	{
+				id: 1,
+				msg: msg,
+				author: this.id,
+				channel: this.channelId
+			}
 		}))
 	}
 }
