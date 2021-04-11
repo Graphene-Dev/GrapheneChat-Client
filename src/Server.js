@@ -12,13 +12,7 @@ export default class Server {
 		this.channels = [
 			{
 				name: "test",
-				messages: [
-					{
-						id: 0,
-						msg: "testsetset",
-						author: 0
-					}
-				]
+				messages: []
 			}
 		]
 		this.channelId = 0;
@@ -35,7 +29,7 @@ export default class Server {
 		this.conn.send(JSON.stringify({
 			type: "NEW_MESSAGE",
 			data:	{
-				id: 1,
+				id: parseInt(new Date().getTime().toString() + this.id.toString().padStart(3,"0").slice(-3)),
 				msg: msg,
 				author: this.id,
 				channel: this.channelId
