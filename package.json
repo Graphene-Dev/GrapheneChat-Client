@@ -4,7 +4,7 @@
   "description": "",
   "main": "public/electron.js",
   "scripts": {
-    "start": "BROWSER=none react-scripts start",
+    "start": "react-scripts start",
     "dev": "electron .",
     "build": "react-scripts build"
   },
