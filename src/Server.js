@@ -1,6 +1,6 @@
 import ServerConnection from './ServerConnection'
 
-import testimg from './test.png'
+import testimg from './Graphene.jpg'
 
 export default class Server {
 	constructor(name, ip, update, id) {
