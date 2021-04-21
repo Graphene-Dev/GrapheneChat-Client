@@ -1,3 +1,4 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/graphene-dev/graphenechat-client/badge)](https://www.codefactor.io/repository/github/graphene-dev/graphenechat-client)
 # GrapheneChat-Client
 
 # Installation
