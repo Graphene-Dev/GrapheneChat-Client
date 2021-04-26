@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import ChannelUI from './ChannelUI'
 import ChannelList from './ChannelList'
@@ -27,6 +28,7 @@ export default class App extends React.Component {
 				<ChannelList />
 				<ChannelUI messages={this.servers[0].channels[0].messages} send={(msg) => this.servers[0].send(msg)} a={this.state.a}/>
 				<MemberList />
+				<Link to="/login">Login</Link>
 			</div>
 		)
 	}

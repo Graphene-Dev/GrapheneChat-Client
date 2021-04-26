@@ -64,3 +64,41 @@ body {
 input:focus {
 	outline: none;
 }
+
+.standalone-cont {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(47, 49, 54);
+}
+
+.standalone-main {
+	width: 40vw;
+	height: 40vh;
+	background-color: rgb(32, 34, 37);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	border-radius: 25px;
+}
+
+.standalone-main input[type="text"], .standalone-main input[type="password"]{
+	width: 30vw;
+	margin: 10px 5vw;
+	height: 30px;
+}
+
+.standalone-main input[type="submit"] {
+	float: right;
+	margin-right: 5vw;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
