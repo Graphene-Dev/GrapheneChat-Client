@@ -82,7 +82,7 @@ input:focus {
 	border-radius: 25px;
 }
 
-.standalone-main input[type="text"], .standalone-main input[type="password"]{
+.standalone-main input[type="text"], .standalone-main input[type="password"], .standalone-main input[type="email"]{
 	width: 30vw;
 	margin: 10px 5vw;
 	height: 30px;

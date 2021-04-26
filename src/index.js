@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,9 @@ ReactDOM.render(
       <Switch>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
         <Route path="/">
           <App />
