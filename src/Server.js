@@ -16,12 +16,18 @@ export default class Server {
 			}
 		]
 		this.channelId = 0;
+
 	}
 
 	onMessage(msg) {
 		msg = JSON.parse(msg)
-		if (msg.type === "NEW_MESSAGE")
+		if (msg.type === "NEW_MESSAGE") {
 			this.channels[this.channelId].messages.push(msg.data);
+		}else if (msg.type === "MSG_LIST") {
+			for (var i of msg.list) {
+				this.channels[i.channel].messages.push(i);
+			}
+		}
 		this.update()
 	}
 
